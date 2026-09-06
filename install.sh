@@ -68,6 +68,10 @@ Packages(){
 Configs(){
 
 	# Swappiness:
+
+	answer=""
+
+	read -p "Add 'vm.swappiness=10' to the config file, understood? (type anything to proceed) : " answer
 	
 	sudo nvim /etc/sysctl.d/99-swappiness.conf
 
@@ -100,6 +104,10 @@ Rice(){
 	cp -r i3 kitty polybar ~/.config
 
 	cp pink.png ~/Pictures
+
+	cd ~/.config/polybar/
+
+	chmod +x launch.sh
 
 	# Fonts:
 	
