@@ -31,7 +31,7 @@ Packages(){
 
 	 sudo apt update && sudo apt upgrade
 
-	 sudo apt install kitty rofi feh lxsession polybar vlc picom picom-conf wget tlp neovim steam
+	 sudo apt install i3 kitty rofi feh lxsession polybar vlc picom picom-conf wget tlp neovim steam
 
 	 sudo apt install wine-installer git lxappearance numlockx pavucontrol cmatrix cava htop tty-clock gimp
 
@@ -69,7 +69,7 @@ Configs(){
 
 	# Swappiness:
 	
-	sudo echo "vm.swappiness=10" >> /etc/sysctl.d/99-swappiness.conf
+	sudo nvim /etc/sysctl.d/99-swappiness.conf
 
 	# Bluetooth:
 	
