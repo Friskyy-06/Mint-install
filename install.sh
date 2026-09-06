@@ -31,21 +31,13 @@ Packages(){
 
 	 sudo apt update && sudo apt upgrade
 
-	 sudo apt install i3 kitty rofi feh lxsession polybar vlc picom picom-conf wget tlp neovim steam
+	 sudo apt install i3 kitty rofi feh lxpolkit polybar vlc picom picom-conf wget tlp neovim steam
 
 	 sudo apt install wine-installer git lxappearance numlockx pavucontrol cmatrix cava htop tty-clock gimp
 
          # Flatpaks:
 
 	 flatpak install flathub dev.vencord.Vesktop net.lutris.Lutris
-
-	 # Other:
-	 
-	 cd ~/Downloads/
-
-         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-	 sudo apt install ./google-chrome-stable_current_amd64.deb
 
          # Setup:
 
