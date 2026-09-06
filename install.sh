@@ -163,3 +163,7 @@ main(){
 
 }
 
+while [[ "1" = "1" ]];
+ do
+	main
+done
