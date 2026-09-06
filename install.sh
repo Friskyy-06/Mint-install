@@ -31,7 +31,7 @@ Packages(){
 
 	 sudo apt update && sudo apt upgrade
 
-	 sudo apt install i3 kitty rofi feh lxpolkit polybar vlc picom picom-conf wget tlp neovim steam
+	 sudo apt install i3 kitty rofi feh nemo lxpolkit polybar vlc picom picom-conf wget tlp neovim steam
 
 	 sudo apt install wine-installer git lxappearance numlockx pavucontrol cmatrix cava htop tty-clock gimp
 
