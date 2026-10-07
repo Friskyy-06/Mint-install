@@ -1,0 +1,50 @@
+sudo pacman -S ufw gufw ntp amd-ucode numlockx power-profiles-daemon cups noto-fonts-cjk bluez bluez-utils blueman mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon dolphin dolphin-plugins ffmpegthumbs filelight kdegraphics-thumbnailers ark unzip zip unrar ntfs-3g ntfs-progs git wget vlc vlc-gui-ncurses vlc-plugins-all gvfs bash-completion wine-staging wine-mono winetricks steam gimp libreoffice kate okular
+
+[Multilib]
+-enable 32 bit packages in /etc/pacman.conf
+
+[CPU]
+- apply microcode with grub-update
+
+[NTP]
+-sudo systemctl enable ntpd.service
+
+[Numlock]
+
+-/usr/local/bin/numlock.sh
+
+  #!/bin/bash
+
+  for tty in /dev/tty{1..6}
+  do
+      /usr/bin/setleds -D +num < "$tty";
+  done
+
+   ----> Make the script EXECUTABLE!
+
+-/etc/systemd/system/numlock.service
+
+   [Unit]
+   Description=numlock
+
+   [Service]
+   ExecStart=/usr/local/bin/numlock.sh
+   StandardInput=tty
+   RemainAfterExit=yes
+
+   [Install]
+   WantedBy=multi-user.target
+
+   ---> Then sudo systemctl enable numlock.service
+
+[Power]
+
+- sudo systemctl enable power-profiles-daemon
+
+[TRIM]
+-sudo systemctl enable fstrim.timer
+
+[Bluetooth]
+-sudo systemctl enable bluetooth
+[Paccache]
+-sudo systemctl enable paccache.timer
